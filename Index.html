@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <header class="container mx-auto bg-white">
+        <div class="flex items-center justify-between py-7">
+            <div class="flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-bag-shopping text-background text-2xl"></i>
+                <p class="text-2xl font-bold">ShopHup</p>
+            </div>
+            <div class="max-lg:hidden ">
+                <ul class="flex items-center justify-around gap-20">
+                    <li>
+                        <a href="#" class="text-background text-base font-bold">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base font-bold">Categories</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base font-bold">Products</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex gap-5 items-center justify-center">
+                <div class="lg:hidden font-bold text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <i class="fa-solid fa-cart-shopping text-background text-2xl"></i>
+            </div>
+        </div>
+    </header>
+    <section class="bg-linear-to-br from-[#EEF2FF] to-[#E0E7FF] border border-white max-lg:px-5">
+        <div class="flex py-10 container mx-auto max-lg:flex-wrap">
+            <div class=" space-y-12">
+                <p class="text-background max-w-55 rounded-full p-1 bg-[#d6e1f8]">BEST QUALITY PRODUCTS</p>
+                <h1 class="text-5xl font-semibold max-w-100 leading-17">
+                    Discover the Best Products
+                </h1>
+                <p class="text-gray font-base font-semibold">Browse categories and find what <br> you need in one place
+                </p>
+                <button class="text-base font-semibold text-white bg-background rounded-xl p-3">
+                    Shop Now ➜
+                </button>
+            </div>
+            <div class="max-w-220">
+                <img src="market.png" class="">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto flex gap-5 pt-25">
+            <div>
+                <div class="hidden fixed top-0 left-0 z-60 h-screen overflow-y-auto w-75 border border-gray-200 rounded-r-2xl p-5 shadow-sm bg-[#F6F6F6] lg:block lg:static"  id="sidebar">
+                    <div class="flex items-center justify-between text-base font-semibold">
+                        Categories
+                        <button
+                            class="text-3xl hover:bg-background/30 hover:rounded-full cursor-pointer transition-all">▾</button>
+                    </div>
+                    <div class="space-y-3" id="filter">
+                        <div class="flex gap-4">
+                            <input type="radio" id="all" name="categoryes" class="check" checked>
+                            <label for="all">All</label><br>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="menuBtn" class="lg:hidden  z-50 font-bold text-2xl hover:bg-background hover:text-white rounded-lg cursor-pointer p-2 transition-all">
+                    <i class="fa-solid fa-bars "></i>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 gap-4 h-fit" id="products">
+
+                </div>
+                <div class="flex items-center justify-center py-5">
+                    <button onclick="loadMore()"
+                        class="bg-black text-white cursor-pointer py-2 px-4 rounded-lg  hover:bg-black/90 transition">
+                        Load More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="categories.js"></script>
+</body>
+
+</html>
